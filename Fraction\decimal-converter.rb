@@ -1,17 +1,22 @@
+Loop_define = "Convert a decimal or fraction:"
 loop do
-   puts "Convert a decimal or fraction:"
-  
-   input = gets&.chomp || "0.25"
-  
+   puts Loop_define
+   input = gets&.chomp&.strip&.squeeze("./")|| "0.25"
    break if input.downcase == "exit"
+   next if input.empty?
     if input.include?("/")
-     decimal = input.to_r.to_f
-     puts "The decimal is: #{decimal}\n\n"
-    
+        if input.split("/")[1].to_f == 0.0
+      puts "Error.\n\n"
+      next
+    end
+        fraction = input.to_r
+     puts "The decimal is: #{fraction.to_f}\n\n"
    elsif input.include?(".")
      fraction = input.to_r
      puts "The fraction is: #{fraction}\n\n"
-    
+   elsif input =~ /\A\d+\z/
+    puts "Fraction: #{input}/1"
+    puts "Decimal is: #{input}.0\n\n"
    else
      puts "Input a valid fraction/decimal\n\n"
    end
