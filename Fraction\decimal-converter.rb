@@ -1,4 +1,4 @@
-puts "Welcome to my Calculator\n\n"
+puts "Welcome to my Convertor\n\n"
 Loop_define = "Convert a decimal or fraction:"
 loop do
    puts Loop_define
