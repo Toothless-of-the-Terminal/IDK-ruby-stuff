@@ -2,7 +2,7 @@ prompt = "multiply a number\n"
 loop do
    
     puts prompt
-    prompt = "AGAIN?\n"
+    prompt = "ANOTHER?\n"
     input = gets.chomp.strip
     break if input.downcase == 'exit' || input.empty?
     numbers = input.split(/\s*[*x]\s*/)
