@@ -39,4 +39,5 @@ loop do
     else
         puts "Error."
     end
-end; puts "bye!"
+end
+puts "bye!"
