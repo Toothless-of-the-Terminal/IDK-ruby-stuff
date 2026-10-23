@@ -15,7 +15,6 @@ loop do
         numbers = input.split(/\s*[\/\\]\s*/)
         num0 = numbers[0].to_f
         num1 = numbers[1].to_f
-      
         if num1 == 0
             puts "\nError.\n\n"
         else
