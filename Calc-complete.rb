@@ -3,7 +3,7 @@ loop do
     puts prompt
     prompt = "ANOTHER?\n"
     input = gets.chomp.strip
-    break if input.downcase == 'exit' || input.empty?
+    break if input.downcase == 'exit' || input.downcase == 'e' || input.downcase == 'stop' || input.empty?
     input = input.squeeze('*x/_.,\#+')
     if input.match?(/[x*]/)
         numbers = input.split(/\s*[*x]\s*/)
