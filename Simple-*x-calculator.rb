@@ -1,6 +1,5 @@
 prompt = "multiply a number\n"
 loop do
-   
     puts prompt
     prompt = "ANOTHER?\n"
     input = gets.chomp.strip
