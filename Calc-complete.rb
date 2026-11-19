@@ -45,12 +45,8 @@ loop do
         end
     elsif input.match?(/!/)
      num = input.split(/\s*!\s*/).first.to_i
-     if num < 0
-         puts "Error."
-     else
          answer = (1..num).reduce(1, :*)
          puts "\nanswer is " + "%g\n\n" % answer
-     end
     elsif input.match(/[,.]/)
         input = input.gsub(',', '.')
         puts "\nconverted form is #{input.to_r}\n\n"
